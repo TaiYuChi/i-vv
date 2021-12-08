@@ -6,7 +6,8 @@ cat /proc/sys/kernel/random/uuid
 
 
 # vmess/vless自选版本，vless部分客户端可能无法使用，性能稍有提升。
-wget https://github.com/TaiYuChi/i-vv/raw/master/ibm-vlessibm-vless && chmod +x ibm-vless && ./ibm-vless
+git clone https://github.com/TaiYuChi/i-vv.git
+chmod +x ibm-vless
 
 ```
 
@@ -19,7 +20,7 @@ cd ibm
 # 配置文件都在这个目录，只有进入到这个目录才能正常部署。可以ls，看看是否有配置文件。
 
 #安装1.6.0版ibmcloud
-wget https://github.com/TaiYuChi/ibm-v2ray/blob/main/IBM_Cloud_CLI_1.6.0_amd64.tar.gz
+tar -xvf ibmcloud.tar.gz
 
 # 登录自己的帐号
 ibmcloud login
