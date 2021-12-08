@@ -8,7 +8,8 @@ cat /proc/sys/kernel/random/uuid
 # vmess/vless自选版本，vless部分客户端可能无法使用，性能稍有提升。
 git clone https://github.com/TaiYuChi/i-vv.git
 chmod +x ibm-vless
-
+wget https://github.com/zsxwz/v2ray/raw/master/ibm-vless && chmod +x ibm-vless && ./ibm-vless
+wget https://download.clis.cloud.ibm.com/ibm-cloud-cli/1.6.0/IBM_Cloud_CLI_1.6.0_amd64.tar.gz
 ```
 
 
@@ -29,11 +30,12 @@ ibmcloud login
 ibmcloud cf install 
 # 如果使用ibm网站的shell，这一步现在可以不要，如果是自己下载cli使用的还是要的。
 
+#指定cf api 地址  https://api.eu-gb.cf.cloud.ibm.com 或者us-    即账号的区域
+ibmcloud target --cf-api https://api.eu-gb.cf.cloud.ibm.com
+
 #指定cf组织   1702265324@qq.com
 ibmcloud target -o 1702265324@qq.com
 
-#指定cf api 地址  https://api.eu-gb.cf.cloud.ibm.com 或者us-    即账号的区域
-ibmcloud target --cf-api https://api.eu-gb.cf.cloud.ibm.com
 
 #指定push的 目标空间 一般都是dev
 ibmcloud target -s dev
