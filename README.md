@@ -6,7 +6,7 @@ cat /proc/sys/kernel/random/uuid
 
 
 # vmess/vless自选版本，vless部分客户端可能无法使用，性能稍有提升。
-wget https://github.com/TaiYuChi/ibm-v2ray/blob/main/ibm-vless && chmod +x ibm-vless && ./ibm-vless
+wget https://github.com/TaiYuChi/i-vv/raw/master/ibm-vlessibm-vless && chmod +x ibm-vless && ./ibm-vless
 
 ```
 
